@@ -8,15 +8,15 @@ import Filterproduct from './Filterproduct';
 
 const Home = () => {
   const productData=useSelector((state)=>state.product.productList)
-  // console.log(productData)
+ 
   const homeproductcartlist=productData.slice(1,50)
   const homeproductcartlistcartlist=productData.filter(el=>el.category==='Mythologybook',[1])
-  // console.log(homeproductcartlistcartlist);
+ 
   const loadingArray=new Array(8).fill(null)
   const loadingArrayFeature=new Array(10).fill(null)
   
   const categoryList=[...new Set(productData.map(el=>el.category))]
-  // console.log(categoryList);
+ 
 
  
   const [datafilter,setdatafilter]=useState([])
@@ -69,10 +69,7 @@ useEffect(()=>{
    <div className="py-3 justify-center align-center  grid">
         <div className='flex items-center'>
         <h2 className='font-bold text-ms text-slate-800 '>POPULAR SELLING BOOKS</h2>
-        {/* <div className='ml-auto flex gap-4' >
-        <button onClick={prev} className='bg-slate-300 hover:bg-slate-400 text-lg p-1 rounded'>< GrPrevious/></button>
-        <button onClick={next} className='bg-slate-300 hover:bg-slate-400 text-lg p-1 rounded'><GrNext/></button>
-        </div> */}
+    
         </div>
         
           <div className='flex gap-2 py-5 overflow-hidden' >
