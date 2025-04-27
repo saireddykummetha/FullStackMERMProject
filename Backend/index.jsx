@@ -20,14 +20,9 @@ mongoose.connect(process.env.MONGODB_URL)
     .catch(()=>{
     console.log('MongoDB error')});
   
-
   const userSchema=new mongoose.Schema({
     firstName:String,
    lastName:String,
-  //  email:{
-  //   type:String,
-  //   unique:true
-  //  },
   email:String,
    password:String,
    confirmpassword:String,
@@ -95,7 +90,7 @@ app.get('/search', async (req, res) => {
         res.send({ message: "Email id is already register", alert: false });
       } else {
         const data = new userModel(req.body);
-        await data.save(); // wait for the save to complete
+        await data.save(); 
         res.send({ message: "Successfully sign up", alert: true });
       }
   
