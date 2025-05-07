@@ -12,7 +12,7 @@ const SearchProduct = () => {
 
     const fetchProduct = async()=>{
         setLoading(true)
-        const response = await fetch('http://localhost:8080/search'+query.search)
+        const response = await fetch('https://fullstackmermproject.onrender.com/search'+query.search)
         const dataResponse = await response.json()
         setLoading(false)
 
