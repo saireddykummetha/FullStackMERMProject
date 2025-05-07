@@ -49,7 +49,7 @@ const Signup = () => {
   const {firstName,email,password,confirmpassword}=data
   if(firstName && email && password && confirmpassword){
      if(password === confirmpassword){
-      const fetchData = await fetch('https://fullstackmermproject.onrender.com/signup',{
+      const fetchData = await fetch('https://fullstackmermproject-1.onrender.com/signup',{
         method : "post",
         headers : {
           "content-type" : "application/json"
