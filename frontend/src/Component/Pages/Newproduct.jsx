@@ -41,7 +41,7 @@ const Newproduct = () => {
     const {name,image,category,price}=data
 
    if(name && image && category && price){
-    const fetchData=await fetch('https://fullstackmermproject.onrender.com/uploadProduct',{
+    const fetchData=await fetch('https://fullstackmermproject-1.onrender.com/uploadProduct',{
       method:'POST',
       headers:{
         'Content-Type':'application/json'
