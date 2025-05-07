@@ -14,7 +14,7 @@ function App() {
  
   useEffect(()=>{
     (async()=>{
-      const res=await fetch('https://fullstackmermproject.onrender.com/product')
+      const res=await fetch('https://fullstackmermproject-1.onrender.com/product')
       const resdata=await res.json()
       console.log(resdata)
       dispatch(setDataproduct(resdata))
